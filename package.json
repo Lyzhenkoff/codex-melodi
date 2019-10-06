@@ -1,0 +1,28 @@
+{
+  "name": "codex-music",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "webpack-dev-server": "^3.8.1"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kirilllert/codeX-music.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kirilllert/codeX-music/issues"
+  },
+  "homepage": "https://github.com/Kirilllert/codeX-music#readme",
+  "devDependencies": {
+    "bootstrap": "^4.3.1",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  }
+}

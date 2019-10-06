@@ -1,0 +1,76 @@
+body, html {
+    height: 100%;
+    margin: 0;
+
+}
+
+.container-of-allBody {
+    height: 100%;
+    margin: 0;
+    background-color: #E7F8FF;
+
+}
+
+.container-of-allBody__container-of-programm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+td {
+    font-family: 'Lato', sans-serif;
+    color: #9BAEB2;
+}
+
+.tracks {
+    color: black;
+}
+
+.button-play {
+    padding: 5px 20px 5px 20px;
+    background-color: #EDFEF6;
+    color: #142D27;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10%;
+    border: 1px solid #3CB371;
+    font-family: 'Lato', sans-serif;
+}
+
+input {
+	background-color: #EDFEF6;
+    color: #142D27;
+    border: 1px solid #3CB371;
+}
+
+.play2 {
+    background-color: #22CBA2;
+}
+
+.top-row {
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+
+.container-of-programm__note-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.note__note-row {
+    background-color: white;
+    padding: 60px 10px 5px 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    border: 1px solid grey;
+    cursor: pointer;
+
+
+}
+
+.note__note-row:hover {
+    background: linear-gradient(to right, #F6EFD2, #CEAD78);
+}
