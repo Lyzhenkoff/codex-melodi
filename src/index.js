@@ -79,50 +79,51 @@ function cursor(e) {
 
 for (let i = 0; i < notes.length; i++) {//добавление data-frequency в массив alles
     notes[i].addEventListener('click', () => {
-        inputExit.value += `${notes[i].textContent}`;
-        ''
+        inputExit.value += notes[i].textContent;
         let myStrings = notes[i].getAttribute('data-frequency');
         myString.push(myStrings);
         alles = myString.join(',')
     })
 }
-
-class allmusic {//класс ,отвечающий за всю мелодию
-
-    constructor(context) {
-        this.context = context;
+var playNote = function (frequency, startTime, duration) {
+    var osc1 = context.createOscillator(),
+        osc2 = context.createOscillator(),
+        volume = context.createGain();
+ 
+    // Set oscillator wave type
+    osc1.type = 'triangle';
+    osc2.type = 'triangle';
+ 
+    volume.gain.value = 0.1;    
+ 
+    // Set up node routing
+    osc1.connect(volume);
+    osc2.connect(volume);
+    volume.connect(context.destination);
+ 
+    // Detune oscillators for chorus effect
+    osc1.frequency.value = frequency + 1;
+    osc2.frequency.value = frequency - 2;
+ 
+    // Fade out
+    volume.gain.setValueAtTime(0.1, startTime + duration - 0.05);
+    volume.gain.linearRampToValueAtTime(0, startTime + duration);
+ 
+    // Start oscillators
+    osc1.start(startTime);
+    osc2.start(startTime);
+ 
+    // Stop oscillators
+    osc1.stop(startTime + duration);
+    osc2.stop(startTime + duration);
+};
+var playSuccessSound = function () {
+    for (var i = 0; i < myString.length; i++) {
+    playNote(myString[i], context.currentTime, myString.length);
     }
+   
+};
 
-    setup() {
-        this.oscillator = this.context.createOscillator();
-        this.gainNode = this.context.createGain();
-
-        this.oscillator.connect(this.gainNode);
-        this.gainNode.connect(this.context.destination);
-        this.oscillator.type = 'sine';
-    }
-
-    play(values) {
-        this.setup();
-
-        this.oscillator.frequency.values = values;
-        this.gainNode.gain.setValueAtTime(0, this.context.currentTime);
-        this.gainNode.gain.linearRampToValueAtTime(1, this.context.currentTime + 0.01);
-
-        this.oscillator.start(this.context.currentTime);
-        this.stop(this.context.currentTime);
-    }
-
-    stop() {
-        this.gainNode.gain.exponentialRampToValueAtTime(0.001, this.context.currentTime + 1);
-        this.oscillator.stop(this.context.currentTime + 1);
-    }
-
-}
-
-let context2 = new (window.AudioContext || window.webkitAudioContext)();//новый context
-
-playButton.addEventListener('click', () => {//проигрывание всей мелодии с помоью массива с data-frequency
-    const music = new AudioContext();
-    (new allmusic(music)).play(alles, "sine");
+playButton.addEventListener('click', () => {
+    playSuccessSound();
 })
