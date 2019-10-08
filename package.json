@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
+    "eslint": "^6.5.1",
     "gulp": "^3.8.11",
     "webpack-dev-server": "^3.8.1"
   },
   "scripts": {
     "build": "webpack --mode production",
-    "build:dev": "webpack --mode development --watch"
+    "build:dev": "webpack --mode development --watch",
+    "lint": "eslint . --ext .js --ext .vue --fix",
+    "dev:up": "docker-compose -f docker-compose.dev.yml up -d",
+    "dev:down": "docker-compose -f docker-compose.dev.yml down"
   },
   "repository": {
     "type": "git",

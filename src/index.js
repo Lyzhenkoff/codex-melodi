@@ -113,7 +113,8 @@ var playNote = function (frequency, startTime, duration) {
 };
 var playSuccessSound = function () {
     for (var i = 0; i < myString.length; i++) {
-    playNote(myString[i], context.currentTime, myString.length);
+    fun1()
+    playNote(myString[i], context.currentTime, time);
     }
    
 };
@@ -121,3 +122,8 @@ var playSuccessSound = function () {
 playButton.addEventListener('click', () => {
     playSuccessSound();
 })
+
+function fun1() {
+    var rng=document.getElementById('rng'); //rng - это Input
+    time=rng.value;
+}
