@@ -6,6 +6,7 @@ const notes = document.querySelectorAll('.note');
 const myString = [];
 let alles = '';
 const playButton = document.getElementById('play');
+import '../css/style.css';
 
 /** class creates a sound */
 class Sound {
