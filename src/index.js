@@ -11,8 +11,7 @@ const myString = [];
 let myStringOne = [];
 let alles = '';
 const playButton = document.getElementById('play');
-
-//import '../css/style.css';
+import '../css/style.css';
 
 /** class creates a sound */
 class Sound {

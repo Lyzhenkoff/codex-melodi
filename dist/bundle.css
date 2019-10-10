@@ -20,7 +20,14 @@ body, html {
 
 td {
     font-family: 'Lato', sans-serif;
-    color: #9BAEB2;
+}
+
+.instument {
+    color: black;
+}
+
+.programm {
+    display: none !important;
 }
 
 .tracks {
@@ -34,12 +41,12 @@ td {
     cursor: pointer;
     text-align: center;
     border-radius: 10%;
-    border: 1px solid #3CB371;
+    border: 1px solid #CFE8DF;
     font-family: 'Lato', sans-serif;
 }
 
 input {
-	background-color: #EDFEF6;
+    background-color: #EDFEF6;
     color: #142D27;
     border: 1px solid #3CB371;
 }
@@ -62,12 +69,12 @@ input {
 
 .note__note-row {
     background-color: white;
-    padding: 60px 10px 5px 10px;
-    margin-right: 10px;
+    padding: 80px 10px 5px 10px;
+    margin-right: 5px;
     margin-top: 5px;
-    border: 1px solid grey;
+    border: 1px solid #ECF1F4;
     cursor: pointer;
-
+    border-radius: 5%;
 
 }
 
