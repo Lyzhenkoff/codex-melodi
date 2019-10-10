@@ -2,11 +2,17 @@ const inputExit = document.getElementById('inputexit');
 const note = document.getElementById('notes');
 const save = document.getElementById('save');
 const notes = document.querySelectorAll('.note');
+const p = document.getElementById('p');
+let noteRow = document.getElementById('note-row');
+const saveButton = document.getElementById('save');
+let notesInput = document.getElementById('notesinput');
 /** кнопки нот */
 const myString = [];
+let myStringOne = [];
 let alles = '';
 const playButton = document.getElementById('play');
-import '../css/style.css';
+
+//import '../css/style.css';
 
 /** class creates a sound */
 class Sound {
@@ -161,24 +167,23 @@ var playNote = function (frequency, startTime, duration) {
 };
 var playSuccessSound = function () {
   for (var i = 0; i < myString.length; i++) {
-    fun1();
-    playNote(myString[i], context.currentTime, time);
+    playNote(myString[i], context.currentTime, 1);
   }
 };
 
 playButton.addEventListener('click', () => {
   playSuccessSound();
+  myStringOne = notesInput.value;
 });
 
-/**
- *
- * function which sets up intervale
- *
- */
-function fun1() {
-  /** управление интервалом между нотами */
-  var rng = document.getElementById('rng');
-  /** rng - это Input */
+time = rng.value;
 
-  time = rng.value;
-}
+p.addEventListener('click', () => {
+  noteRow.classList.remove('programm');
+  inputExit.classList.remove('programm');
+  save.classList.remove('programm');
+});
+
+save.addEventListener('click', () => {
+  notesInput.value = inputExit.value;
+});

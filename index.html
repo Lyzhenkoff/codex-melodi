@@ -3,7 +3,7 @@
 <head>
     <title>Chillout Audio Synthesis</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div class="container-of-all-body">
@@ -13,7 +13,7 @@
                     <tr>
                         <td class="tracks">Tracks</td>
                         <td>Instrument</td>
-                        <td>Melody <i class="fas fa-music-alt"></i></td>
+                        <td>Melody</i></td>
                         <td>Interval,ms</td>
                         <td>Effect</td>
                         <td>Effect again</td>
@@ -21,87 +21,88 @@
                     </tr>
                     <tr>
                         <td>
-                            <div id="play" class="button-play">
+                            <div class="button-play" id="play">
                                 Play
                             </div>
                         </td>
-                        <td>xylophone</td>
+                        <td class="instument">xylophone</td>
                         <td>
-                            <input id="notes" type="" name="">
+                            <input id="notesinput" name="" type="">
+                            <button id="p"><i class="fas fa-music-alt"></i></button>
                             <div class="container-of-programm__container">
-                                <div class="container-of-programm__note-row">
-                                    <div id="notes" class="note note__note-row" data-frequency="196.00">
-                                        <div>G</div>
+                                <div class="programm container-of-programm__note-row" id="note-row">
+                                    <div class="note note__note-row" data-frequency="196.00" id="notes">
+                                        <div>G1</div>
                                     </div>
-                                    <div id="notes" class="note note__note-row" data-frequency="220.00">
-                                        <div>A</div>
+                                    <div class="note note__note-row" data-frequency="220.00" id="notes">
+                                        <div>A1</div>
                                     </div>
-                                    <div id="notes" class="note note__note-row" data-frequency="246.94">
-                                        <div>B</div>
+                                    <div class="note note__note-row" data-frequency="246.94" id="notes">
+                                        <div>B1</div>
                                     </div>
-                                    <div id="notes" class="note note__note-row" data-frequency="261.63">
-                                        <div>C</div>
+                                    <div class="note note__note-row" data-frequency="261.63" id="notes">
+                                        <div>C1</div>
                                     </div>
-                                    <div id="notes"  class="note note__note-row" data-frequency="293.66">
-                                        <div>D</div>
+                                    <div class="note note__note-row"  data-frequency="293.66" id="notes">
+                                        <div>D1</div>
                                     </div>
-                                    <div id="notes"  class="note note__note-row" data-frequency="329.63">
-                                        <div>E</div>
+                                    <div class="note note__note-row"  data-frequency="329.63" id="notes">
+                                        <div>E1</div>
                                     </div>
-                                    <div id="notes" class="note note__note-row" data-frequency="349.23">
-                                        <div>F</div>
+                                    <div class="note note__note-row" data-frequency="349.23" id="notes">
+                                        <div>F1</div>
                                     </div>
                                     <div class="note note__note-row" data-frequency="392.00">
-                                        <div>G</div>
+                                        <div>G2</div>
                                     </div>
                                     <div class="note note__note-row" data-frequency="440.00">
-                                        <div>A</div>
+                                        <div>A2</div>
                                     </div>
                                     <div class="note note__note-row" data-frequency="493.88">
-                                        <div>B</div>
+                                        <div>B2</div>
                                     </div>
                                     <div class="note note__note-row" data-frequency="523.25">
-                                        <div>C</div>
+                                        <div>C2</div>
                                     </div>
                                     <div class="note note__note-row" data-frequency="587.33">
-                                        <div>D</div>
+                                        <div>D2</div>
                                     </div>
                                     <div class="note note__note-row" data-frequency="659.25">
-                                        <div>E</div>
+                                        <div>E2</div>
                                     </div>
                                     <div class="note note__note-row" data-frequency="698.46">
-                                        <div>F</div>
+                                        <div>F2</div>
                                     </div>
                                     <div class="note note__note-row" data-frequency="783.99">
-                                        <div>G</div>
+                                        <div>G1</div>
                                     </div>
                                     <div class="note note__note-row" data-frequency="880.00">
-                                        <div>A</div>
+                                        <div>A2</div>
                                     </div>
                                     <div class="note note__note-row" data-frequency="987.77">
-                                        <div>B</div>
+                                        <div>B2</div>
                                     </div>
                                     <div class="note note__note-row" data-frequency="1046.50">
-                                        <div>C</div>
+                                        <div>C2</div>
                                     </div>
                                 </div>
                             </div>
-                            <input id="inputexit" contenteditable="true" type="" name="">
-                            <button id="save">save</button>
+                            <input class="programm" contenteditable="true" id="inputexit" name="" type="">
+                            <button class="programm" id="save">save</button>
                         </td>
                         <td>
-                            <input type="" name="">
+                            <input name="" type="">
                         </td>
-                        <td><input type="" name=""></td>
-                        <td><input id="rng" type="range" min="0" max="100" step="1" value="50"></td>
-                        <td><input type="range" min="0" max="100" step="1" value="50"></td>
+                        <td><input name="" type=""></td>
+                        <td><input id="rng" max="100" min="0" step="1" type="range" value="50"></td>
+                        <td><input max="100" min="0" step="1" type="range" value="50"></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
-    <script type="text/javascript" src="dist/main.js"></script>
-    <script type="text/javascript" src=""></script>
-    
+    <script src="dist/main.js" type="text/javascript"></script>
+    <script src="src/index.js" type="text/javascript"></script>
+
 </body>
 </html>
