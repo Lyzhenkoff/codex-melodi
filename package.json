@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
-    "eslint": "^6.5.1",
     "gulp": "^3.8.11",
     "webpack-dev-server": "^3.8.1"
   },
@@ -25,8 +24,12 @@
   },
   "homepage": "https://github.com/Kirilllert/codeX-music#readme",
   "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-loader": "^8.0.6",
     "bootstrap": "^4.3.1",
     "css-loader": "^3.2.0",
+    "eslint": "^6.5.1",
     "eslint-config-codex": "github:codex-team/eslint-config",
     "mini-css-extract-plugin": "^0.8.0",
     "webpack": "^4.41.0",

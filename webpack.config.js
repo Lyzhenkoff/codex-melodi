@@ -13,7 +13,21 @@ const conf = {
         },
         module: {
             rules: [
-                {
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: [
+                    {
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+      },  {
                     test: /\.css$/,
                     use: [
                         {
@@ -23,12 +37,13 @@ const conf = {
                                 // by default it use publicPath in webpackOptions.output
                                 publicPath: '../'
                             }
-                        },
+                        }
                         'css-loader'
                     ]
                 }
             ]
         },
+
 
         plugins: [
             new MiniCssExtractPlugin({
