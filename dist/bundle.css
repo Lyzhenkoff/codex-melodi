@@ -30,6 +30,10 @@ td {
     display: none !important;
 }
 
+input{
+    padding: 5px 5px 5px 5px;
+}
+
 .tracks {
     color: black;
 }

@@ -1,17 +1,17 @@
+import '../css/style.css';
 const inputExit = document.getElementById('inputexit');
-const note = document.getElementById('notes');
+const notess = document.getElementById('notes');
 const save = document.getElementById('save');
 const notes = document.querySelectorAll('.note');
 const p = document.getElementById('p');
-let noteRow = document.getElementById('note-row');
+const noteRow = document.getElementById('note-row');
 const saveButton = document.getElementById('save');
-let notesInput = document.getElementById('notesinput');
+const notesInput = document.getElementById('notesinput');
 /** кнопки нот */
 const myString = [];
 let myStringOne = [];
 let alles = '';
 const playButton = document.getElementById('play');
-import '../css/style.css';
 
 /** class creates a sound */
 class Sound {
@@ -174,8 +174,6 @@ playButton.addEventListener('click', () => {
   playSuccessSound();
   myStringOne = notesInput.value;
 });
-
-time = rng.value;
 
 p.addEventListener('click', () => {
   noteRow.classList.remove('programm');
