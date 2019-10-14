@@ -1,87 +1,88 @@
 body, html {
-    height: 100%;
-    margin: 0;
+  height: 100%;
+  margin: 0;
 
 }
 
 .container-of-all-body {
-    height: 100%;
-    margin: 0;
-    background-color: #E7F8FF;
+  height: 100%;
+  margin: 0;
+  background-color: #E7F8FF;
 
 }
 
 .container-of-all-body__container-of-programm {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
 td {
-    font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 .instument {
-    color: black;
+  color: black;
 }
 
 .programm {
-    display: none !important;
-}
-
-input{
-    padding: 5px 5px 5px 5px;
-}
-
-.tracks {
-    color: black;
-}
-
-.button-play {
-    padding: 5px 20px 5px 20px;
-    background-color: #EDFEF6;
-    color: #142D27;
-    cursor: pointer;
-    text-align: center;
-    border-radius: 10%;
-    border: 1px solid #CFE8DF;
-    font-family: 'Lato', sans-serif;
+  display: none !important;
 }
 
 input {
-    background-color: #EDFEF6;
-    color: #142D27;
-    border: 1px solid #3CB371;
+  padding: 5px 5px 5px 5px;
+}
+
+.tracks {
+  color: black;
+}
+
+.button-play {
+  padding: 5px 20px 5px 20px;
+  background-color: #EDFEF6;
+  color: #142D27;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 10%;
+  border: 1px solid #CFE8DF;
+  font-family: 'Lato', sans-serif;
+}
+
+input {
+  background-color: #EDFEF6;
+  color: #142D27;
+  border: 1px solid #3CB371;
 }
 
 .play2 {
-    background-color: #22CBA2;
+  background-color: #22CBA2;
 }
 
 .top-row {
-    display: flex;
-    position: relative;
-    z-index: 2;
+  display: flex;
+  position: relative;
+  z-index: 2;
 }
 
 .container-of-programm__note-row {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .note__note-row {
-    background-color: white;
-    padding: 80px 10px 5px 10px;
-    margin-right: 5px;
-    margin-top: 5px;
-    border: 1px solid #ECF1F4;
-    cursor: pointer;
-    border-radius: 5%;
+  background-color: white;
+  padding: 80px 10px 5px 10px;
+  margin-right: 5px;
+  margin-top: 5px;
+  border: 1px solid #ECF1F4;
+  cursor: pointer;
+  border-radius: 5%;
 
 }
 
 .note__note-row:hover {
-    background: linear-gradient(to right, #F6EFD2, #CEAD78);
+  background: linear-gradient(to right, #F6EFD2, #CEAD78);
 }
+
