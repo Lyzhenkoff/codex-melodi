@@ -1,4 +1,5 @@
 import '../css/style.css';
+
 const inputExit = document.getElementById('inputexit');
 const notess = document.getElementById('notes');
 const save = document.getElementById('save');
