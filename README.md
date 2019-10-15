@@ -1,4 +1,4 @@
-# codeX-music
+# codeX-melodi
 
 
 
@@ -16,3 +16,5 @@ Build for production:
 ```
 npm run build
 ```
+
+
