@@ -23,6 +23,6 @@ npm run build
 ```
 
 
-here was my test for Codex-team
+Here was my test for Codex-team
 
 
