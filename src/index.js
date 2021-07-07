@@ -1,4 +1,5 @@
 import '../css/style.css';
+
 const inputExit = document.getElementById('inputexit');
 const notess = document.getElementById('notes');
 const save = document.getElementById('save');
@@ -166,7 +167,7 @@ var playNote = function (frequency, startTime, duration) {
 };
 var playSuccessSound = function () {
   for (var i = 0; i < myString.length; i++) {
-    playNote(myString[i], context.currentTime, 1);
+    playNote(myString[i], context.currentTime, 3);
   }
 };
 
